@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "ba20df66-1630-4d91-83ff-26c50a51843d",
+		"name": "DNA Center",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5607800",
+		"_collection_link": "https://grey-space-962324.postman.co/workspace/devasc_2023_class2~22a5c2ec-a473-4958-8260-844411591e2a/collection/5607800-ba20df66-1630-4d91-83ff-26c50a51843d?action=share&creator=5607800&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get Token By Authorization String",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/dna/system/api/v1/auth/token",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"dna",
+						"system",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token By Username And Password",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Cisco123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "devnetuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/dna/system/api/v1/auth/token",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"dna",
+						"system",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MGVjNGU0ZjRjYTdmOTIyMmM4MmRhNjYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVlOGU4OTZlNGQ0YWRkMDBjYTJiNjQ4ZSJdLCJ0ZW5hbnRJZCI6IjVlOGU4OTZlNGQ0YWRkMDBjYTJiNjQ4NyIsImV4cCI6MTY4NDkyMjQyNCwiaWF0IjoxNjg0OTE4ODI0LCJqdGkiOiJkNzI1ZGI3Mi1hNmMzLTQ2MTMtOWJlYy1jZTNjYTBjZTkzNDAiLCJ1c2VybmFtZSI6ImRldm5ldHVzZXIifQ.WsSP8F8nVUlQSYT4MEQkOtlN8SGKkew4e_2F4v8ffnNoVbsCbFQcMMwyJyUKDtiezV0Jnhkl3q7Pw0APpxt23AsgUc5m5b3-6mEQLiPWMh9tJ7pdWPInU42BB4OQdHiRHEpEOzb4ncMJXuIhi3MuUh1nvpU8RCGfVNmggKPYzGrU7vuYwpjPW7mrc9dc6FAaRYycAp-qOa4gSOAeHFYSwExobTZX_wfc2bAthMpiLbTEdhiXNOvK8n2_HVtirswfWGEfaY-1kej3VUdRExh__i0-9M9Un3woEdquO5FIKDB7rCKpBdnbHfu6MTRXxva6Ng4vNOT5ftVU2wleYX2Y7A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/api/v1/network-device",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"network-device"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

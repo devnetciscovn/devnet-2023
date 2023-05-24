@@ -1,0 +1,4 @@
+base_url = 'https://webexapis.com'
+token = 'ZDE1YjA0YzEtY2Q1My00Y2FkLWJiNDAtNWU0NjdhNTdiZGJmODYxMjM3MTgtNDcy_P0A1_f1f3518a-8e80-4525-82c8-62356e77eae1'
+room_id_phuc = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vNGI4ZDk5MjAtZjkzNC0xMWVkLWI2YTYtM2QwZDc4NGEyNGYy'
+room_id_group_101 = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vZjZiNDAwYTAtZjlmYy0xMWVkLTgyMjctNGZlYjczZmI0MGY2'

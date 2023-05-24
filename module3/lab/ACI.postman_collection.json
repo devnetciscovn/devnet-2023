@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "fc23d8bb-07e9-4897-9feb-fda2e8507f5d",
+		"name": "ACI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5607800",
+		"_collection_link": "https://grey-space-962324.postman.co/workspace/devasc_2023_class2~22a5c2ec-a473-4958-8260-844411591e2a/collection/5607800-fc23d8bb-07e9-4897-9feb-fda2e8507f5d?action=share&creator=5607800&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"aaaUser\": { \"attributes\": {\n\"name\": \"admin\",\n\"pwd\": \"!v3G@!4@Y\" }\n} }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandboxapicdc.cisco.com/api/aaaLogin.json",
+					"protocol": "https",
+					"host": [
+						"sandboxapicdc",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tenants",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://sandboxapicdc.cisco.com/api/node/class/fvTenant.json",
+					"protocol": "https",
+					"host": [
+						"sandboxapicdc",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"node",
+						"class",
+						"fvTenant.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
