@@ -1,0 +1,34 @@
+---
+- name: play1 (Configure Loopback)
+  hosts: r1
+  gather_facts: no
+  tasks:
+    - name: task1 ping test
+      ping:
+
+    - name: taks2 configure loopback
+      cisco.iosxr.iosxr_l3_interfaces:
+        config:
+          - name : loopback163
+            ipv4 : 
+              - address: 10.0.0.163/32 
+          - name: loopback164
+            ipv4:
+              - address: 10.0.0.164/32
+          - name: loopback165
+            ipv4:
+              - address: 10.0.0.165/32
+    
+    - name: task3 - show on router
+      cisco.iosxr.iosxr_command:
+        commands: 
+          - show ipv4 interface brief
+          - show run interface loopback163
+          - show run interface loopback164
+          - show run interface loopback165
+      register: output
+    
+    - name: taks 4 - display the result
+      debug:
+        var: output.stdout_lines
+

@@ -1,0 +1,174 @@
+PYTHON
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+YAML
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+
+PYTHON
+{
+  hostname: r1
+}
+
+YAML
+hostname: r1
+
+PYTHON
+
+{
+  hostname: r1,
+  ip: 10.0.0.1
+}
+
+YAML
+hostname: r1
+ip: 10.0.0.1
+
+
+PYTHON
+[
+  {
+    hostname: r1
+  },
+  {
+    hostname: r2
+  }
+]
+
+YAML
+- hostname: r1
+- hostname: r2
+
+
+PYTHON
+[
+  {
+    hostname: r1,
+    ip: 10.0.0.1
+  },
+  {
+    hostname: r2,
+    ip: 10.0.0.2    
+  }
+]
+
+YAML
+- hostname: r1
+  ip: 10.0.0.1
+- hostname: r2
+  ip: 10.0.0.2
+
+
+PYTHON
+
+[
+  {
+    hostname: r1,
+    ip: 10.0.0.1,
+    ospf: {
+      id: 1
+    }
+  },
+  {
+    hostname: r2,
+    ip: 10.0.0.2
+    ospf: {
+      id: 2
+    }    
+  }
+]
+
+YAML
+
+- hostname: r1
+  ip: 10.0.0.1
+  ospf:
+    id: 1
+- hostname: r2
+  ip: 10.0.0.2
+  ospf:
+    id: 1
+
+
+PYTHON
+[
+  {
+    hostname: r1,
+    ip: 10.0.0.1,
+    ospf: {
+      id: 1,
+      router-id: 100.0.0.1
+    }
+  },
+  {
+    hostname: r2,
+    ip: 10.0.0.2
+    ospf: {
+      id: 2.
+      router-id: 100.0.0.1
+    }    
+  }
+]
+
+YAML
+- hostname: r1
+  ip: 10.0.0.1
+  ospf:
+    id: 1
+    router-id: 100.0.0.1
+- hostname: r2
+  ip: 10.0.0.2
+  ospf:
+    id: 2
+    router-id: 100.0.0.1
+
+
+
+PYTHON
+[
+  {
+    hostname: r1,
+    ip: 10.0.0.1,
+    ospf: {
+      id: 1,
+      router-id: 100.0.0.1,
+      interfaces: [Gi0/1, Gi0/2, Gi0/3]
+    }
+  },
+  {
+    hostname: r2,
+    ip: 10.0.0.2
+    ospf: {
+      id: 2,
+      router-id: 100.0.0.1,
+      interfaces: [Gi1/1, Gi1/2, Gi1/3]
+    }    
+  }
+]
+
+YAML
+- hostname: r1
+  ip: 10.0.0.1
+  ospf:
+    id: 1
+    router-id: 100.0.0.1
+    interfaces:
+      - Gi0/1
+      - Gi0/2
+      - Gi0/3
+- hostname: r2
+  ip: 10.0.0.2
+  ospf:
+    id: 2
+    router-id: 100.0.0.1
+    interfaces:
+      - Gi1/1
+      - Gi1/2
+      - Gi1/3

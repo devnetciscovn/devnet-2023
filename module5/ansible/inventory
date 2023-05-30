@@ -1,0 +1,12 @@
+[iosxr:vars]
+ansible_connection=ansible.netcommon.network_cli
+ansible_network_os=cisco.iosxr.iosxr
+
+[iosxr]
+r1 ansible_host=sandbox-iosxr-1.cisco.com ansible_user=admin ansible_password=C1sco12345  
+
+r2 ansible_host=10.0.0.1 ansible_user=admin ansible_password=C1sco12345
+
+r3 ansible_host=sandbox-iosxr-3.cisco.com ansible_user=admin ansible_password=C1sco12345
+
+r4 ansible_host=sandbox-iosxr-4.cisco.com ansible_user=admin ansible_password=C1sco12345

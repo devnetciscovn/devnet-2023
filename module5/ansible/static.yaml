@@ -1,0 +1,25 @@
+---
+- name: Configure Static Routes
+  hosts: iosxr
+  gather_facts: no
+  tasks:
+    - name: Configure Static Routes
+      cisco.iosxr.iosxr_static_routes:
+        config:
+          - address_families: 
+              - afi: ipv4
+                safi: unicast
+                routes:
+                  - dest: 10.10.10.0/24
+                    next_hops:
+                      - forward_router_address: 10.10.20.254
+                      - forward_router_address: 10.10.20.253
+    - name: Verify Result
+      cisco.iosxr.iosxr_command:
+        commands:
+          - show run router static
+          - show route static
+      register: output
+    - debug:
+        var: output.stdout_lines
+
